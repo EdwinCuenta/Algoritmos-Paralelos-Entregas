@@ -78,10 +78,6 @@ func main() {
 		})
 	})
 
-	r.GET("/crear.html", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "crear.html", nil)
-	})
-
 	r.POST("/guardar", func(c *gin.Context) {
 		var pelicula Pelicula
 		if err := c.ShouldBind(&pelicula); err != nil {
@@ -100,28 +96,6 @@ func main() {
 		c.Redirect(http.StatusFound, "/")
 	})
 
-	r.GET("/editar.html", func(c *gin.Context) {
-		id := c.DefaultQuery("id", "0")
-
-		// Obtener los detalles del pelicula basado en el ID de la base de datos
-		var pelicula Pelicula
-		err := db.QueryRow("SELECT * FROM peliculas WHERE id = $1", id).Scan(&pelicula.ID, &pelicula.Titulo, &pelicula.Genero, &pelicula.Actores, &pelicula.Duracion, &pelicula.Clasificacion)
-		if err != nil {
-
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
-
-		// Pasar los datos de la pelicula a la plantilla
-		c.HTML(http.StatusOK, "editar.html", gin.H{
-			"id":            pelicula.ID,
-			"titulo":        pelicula.Titulo,
-			"genero":        pelicula.Genero,
-			"actores":       pelicula.Actores,
-			"duracion":      pelicula.Duracion,
-			"clasificacion": pelicula.Clasificacion,
-		})
-	})
 	r.POST("/actualizar", func(c *gin.Context) {
 		id := c.PostForm("id")
 		var pelicula Pelicula
