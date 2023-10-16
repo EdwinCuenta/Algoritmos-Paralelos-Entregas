@@ -9,14 +9,7 @@ services:
     depends_on:
       - app
 
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_USER: edwinacevedo
-      POSTGRES_PASSWORD: 1182709
-      POSTGRES_DB: edwinacevedo
-    ports:
-      - "5432:5433"
+  
 
   app:
     build:
@@ -30,5 +23,13 @@ services:
       - DB_PASSWORD=1182709
       - DB_NAME=edwinacevedo
       - DB_PORT=5432
-    depends_on:
-      - postgres
+    # depends_on:
+    #   - postgres
+
+  networks:
+      - mynetwork
+
+      
+networks:
+  mynetwork:
+    external: true

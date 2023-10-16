@@ -12,9 +12,9 @@ provider "digitalocean" {
 
 
 
-resource "digitalocean_droplet" "web2" {
+resource "digitalocean_droplet" "App" {
   image    = "docker-20-04"
-  name     = "server2"
+  name     = "nameserver"
   region   = "nyc3"
   size     = "s-1vcpu-1gb"
   ssh_keys = [var.fingerprint]
@@ -52,7 +52,7 @@ resource "digitalocean_droplet" "web2" {
     "sudo ufw allow 443",
     "sudo ufw allow 5432",
     "sudo ufw allow 5433",
-    "sudo ufw allow 8000",
+    "sudo ufw allow 8080",
   ]
 }
 
