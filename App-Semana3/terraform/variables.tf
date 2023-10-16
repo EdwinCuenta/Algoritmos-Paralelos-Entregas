@@ -8,7 +8,6 @@ variable "fingerprint" {
   type = string
   description = "ssh key generada"
   default = "f2:d3:57:c3:6b:31:2c:a4:45:b7:85:a8:1a:0d:47:f1"
-  /* default = "8f:99:11:65:6b:df:44:46:6a:f7:12:8d:54:d7:f6:10" */
 }
 
 variable "public_key" {

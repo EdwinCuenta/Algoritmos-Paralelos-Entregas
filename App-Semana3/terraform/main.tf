@@ -25,7 +25,7 @@ resource "digitalocean_droplet" "app" {
     host        = self.ipv4_address
     user        = "root"
     type        = "ssh"
-    /* private_key = file(var.private_key) */
+    private_key = file(var.private_key)
     timeout     = "2m"
   }
 

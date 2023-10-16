@@ -1,4 +1,6 @@
-postgres:
+version: '3'
+services:
+  postgres:
     image: postgres
     environment:
       POSTGRES_USER: edwinacevedo
