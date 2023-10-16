@@ -12,7 +12,7 @@ provider "digitalocean" {
 
 
 
-resource "digitalocean_droplet" "App" {
+resource "digitalocean_droplet" "app" {
   image    = "docker-20-04"
   name     = "nameserver"
   region   = "nyc3"
@@ -25,7 +25,7 @@ resource "digitalocean_droplet" "App" {
     host        = self.ipv4_address
     user        = "root"
     type        = "ssh"
-    private_key = file(var.private_key)
+    /* private_key = file(var.private_key) */
     timeout     = "2m"
   }
 
@@ -34,14 +34,14 @@ resource "digitalocean_droplet" "App" {
     "sudo apt-get update",
     "sudo apt install -y git",
     "git clone https://github.com/EdwinCuenta/Algoritmos-Paralelos-Entregas.git",
-    "cd AlgoritmosParalelos/Semana-04/app/db-app",
+    "cd Algoritmos-Paralelos-Entregas/App-Semana3/AppSiBD",
     "curl -L https://github.com/docker/compose/releases/download/v2.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose",
     "chmod +x /usr/local/bin/docker-compose",
     "docker-compose --version",
     "docker network create mynetwork",
     "docker-compose up -d --build",
     "docker container ls",
-    "cd ../nginx-app",
+    "cd ../AppNoBD",
     "curl -L https://github.com/docker/compose/releases/download/v2.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose",
     "chmod +x /usr/local/bin/docker-compose",
     "docker-compose --version",

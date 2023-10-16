@@ -1,22 +1,23 @@
 variable "tokengenerado" {
     type = string
     description = "token Generado en de DigitalOcean"
-    default = "dop_v1_501799270141555940d52a86c0587184f70ba943d57df9ef3fc0193dc8f12064"
+    default = "dop_v1_1fed12a059f941dfb26cbcf518c276dbe5ce24aec53fbdea3a1c00c9560f4417"
 }
 
 variable "fingerprint" {
   type = string
   description = "ssh key generada"
-  default = "8f:99:11:65:6b:df:44:46:6a:f7:12:8d:54:d7:f6:10"
+  default = "f2:d3:57:c3:6b:31:2c:a4:45:b7:85:a8:1a:0d:47:f1"
+  /* default = "8f:99:11:65:6b:df:44:46:6a:f7:12:8d:54:d7:f6:10" */
 }
 
 variable "public_key" {
     type = string
     description = "Public Key"
-    default = "C:\\Users\\elbac\\.ssh\\id_rsa.pub"
+    default = "C:\\Users\\EDWIN-PC\\.ssh\\id_rsa.pub"
 }
 variable "private_key" {
     type = string
     description = "Private Key"
-    default =  "C:\\Users\\elbac\\.ssh\\id_rsa"
+    default =  "C:\\Users\\EDWIN-PC\\.ssh\\id_rsa"
 }
