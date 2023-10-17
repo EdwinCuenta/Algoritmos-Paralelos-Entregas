@@ -1,7 +1,7 @@
 variable "token" {
     type        = string
     description = "DigitalOcean API Token"
-    default     = "dop_v1_072cddf8ec674303e47fe444126e71f9cc6c5606c967205bf0a51a4c45a8ca81"
+    default     = "dop_v1_bfa06d2b521328415a450fcc2141f9e92e12ac4b22273c0c52251034a5133a4b"
 }
 
 variable "ssh_fingerprint" {

@@ -34,7 +34,7 @@ resource "digitalocean_droplet" "web2" {
     "sudo apt-get update",
     "sudo apt install -y git",
     "git clone https://github.com/EdwinCuenta/Algoritmos-Paralelos-Entregas.git",
-    "cd AlgoritmosParalelos/Semana-04/go-docker-app/db-app",
+    "cd Algoritmos-Paralelos-Entregas/App-Semana3/db-app",
     "curl -L https://github.com/docker/compose/releases/download/v2.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose",
     "chmod +x /usr/local/bin/docker-compose",
     "docker-compose --version",
