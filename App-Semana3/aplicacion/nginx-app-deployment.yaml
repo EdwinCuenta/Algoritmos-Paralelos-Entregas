@@ -46,18 +46,18 @@ spec:
             cpu: "0.5"      
       - name: app
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
         env:
         - name: PORT
-          value: "8000"
+          value: "8080"
         - name: DB_HOST
           value: "postgres-service"
         - name: DB_USER
-          value: "${DB_USER}"
+          value: "edwinacevedo"
         - name: DB_PASSWORD
-          value: "${DB_PASSWORD}"
+          value: "1182709"
         - name: DB_NAME
-          value: "${DB_NAME}"
+          value: "edwinacevedo"
         - name: DB_PORT
           value: "5432"
         resources:
@@ -99,7 +99,7 @@ data:
             ssl_prefer_server_ciphers on;
 
             location / {
-                proxy_pass http://app:8000;
+                proxy_pass http://app:8080;
                 proxy_http_version 1.1;
                 proxy_set_header Upgrade $http_upgrade;
                 proxy_set_header Connection 'upgrade';

@@ -1,12 +1,12 @@
-variable "token" {
+variable "tokenapi" {
     type        = string
-    description = "DigitalOcean API Token"
-    default     = "dop_v1_f65c2081f453674554f832d3a7a6387931c7d306386baefc8e306f799b21c292"
+    description = "token de digitalOcean"
+    default     = "dop_v1_fd485c9c311299c3fa9c722558913cda508bd0a3e12f82d3026b7b816a5bff6b"
 }
 
-variable "ssh_fingerprint" {
+variable "fingerprint_key" {
     type        = string
-    description = "Public Key"
+    description = "key generada con ssh local"
     default     = "6c:ee:fd:83:10:64:2d:01:c4:3b:91:68:f5:f6:dc:77"
 }
 

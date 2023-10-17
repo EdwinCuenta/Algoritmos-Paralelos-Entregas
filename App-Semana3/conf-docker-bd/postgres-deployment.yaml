@@ -31,11 +31,11 @@ spec:
         - containerPort: 5433
         env:
         - name: POSTGRES_USER
-          value: "${DB_USER}"
+          value: "edwinacevedo"
         - name: POSTGRES_PASSWORD
-          value: "${DB_PASSWORD}"
+          value: "1182709"
         - name: POSTGRES_DB
-          value: "${DB_NAME}"
+          value: "edwinacevedo"
         resources:
           limits:
             memory: "1024Mi"  

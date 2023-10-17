@@ -3,9 +3,9 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: edwinacevedo
+      POSTGRES_PASSWORD: 1182709
+      POSTGRES_DB: edwinacevedo
     ports:
       - "5432:5433"
     networks:
