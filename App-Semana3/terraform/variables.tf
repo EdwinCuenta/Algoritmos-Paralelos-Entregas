@@ -1,13 +1,13 @@
-variable "tokengenerado" {
+variable "token" {
     type = string
     description = "token Generado en de DigitalOcean"
-    default = "dop_v1_1fed12a059f941dfb26cbcf518c276dbe5ce24aec53fbdea3a1c00c9560f4417"
+    default = "dop_v1_a2f21cd8fcbe86e4fd5ab80fbe3aba423794105911298a90b443e0a372573298"
 }
 
-variable "fingerprint" {
+variable "fingerprint_ssh" {
   type = string
   description = "ssh key generada"
-  default = "f2:d3:57:c3:6b:31:2c:a4:45:b7:85:a8:1a:0d:47:f1"
+  default = "6c:ee:fd:83:10:64:2d:01:c4:3b:91:68:f5:f6:dc:77"
 }
 
 variable "public_key" {
